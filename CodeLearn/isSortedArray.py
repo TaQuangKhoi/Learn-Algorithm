@@ -18,10 +18,7 @@ Ví dụ:
 """
 
 def isSortedArray(arr):
-    for i in range(len(arr)-1):
-        if arr[i] > arr[i+1]:
-            return False
-    return True
+    return all(arr[i] <= arr[i+1] for i in range(len(arr)-1))
 
 
 arr = [35, 34, 3, 13, 19, 7, 10, 5, 38, 39]
